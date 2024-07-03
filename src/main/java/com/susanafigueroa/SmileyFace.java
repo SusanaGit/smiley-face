@@ -25,6 +25,9 @@ public class SmileyFace extends Application {
 
         // add the scene to the stage
         primaryStage.setScene(scene);
+
+        // show the stage
+        primaryStage.show();
     }
 
     public static void main(String[] args) {
