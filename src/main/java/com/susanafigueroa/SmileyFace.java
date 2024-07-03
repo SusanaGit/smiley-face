@@ -4,7 +4,9 @@ import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.layout.Background;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Arc;
 import javafx.scene.shape.ArcType;
@@ -46,7 +48,7 @@ public class SmileyFace extends Application {
         caption.setFont(Font.font("Verdana", 15));
 
         // create a group that holds all the features
-        Group root = new Group(face, rightEye, leftEye, mouth, caption);
+        Group group = new Group(face, rightEye, leftEye, mouth, caption);
 
         // create a button that will make the face smile
         Button smileButton = new Button("Smile");
@@ -60,6 +62,11 @@ public class SmileyFace extends Application {
 
         // add the buttons to the horizontal container
         buttonBox.getChildren().addAll(smileButton, frownButton);
+
+        // create and configure a vertical container to hold the button box and the face group
+        VBox root = new VBox(10);
+        root.setBackground(Background.EMPTY);
+        root.setAlignment(Pos.CENTER);
 
         // create and configure a new scene
         Scene scene = new Scene(root, 250, 275, Color.YELLOW);
