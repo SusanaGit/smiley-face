@@ -22,6 +22,9 @@ public class SmileyFace extends Application {
 
         // create and configure a new scene
         Scene scene = new Scene(root, 250, 275, Color.YELLOW);
+
+        // add the scene to the stage
+        primaryStage.setScene(scene);
     }
 
     public static void main(String[] args) {
