@@ -7,6 +7,8 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Arc;
 import javafx.scene.shape.ArcType;
 import javafx.scene.shape.Circle;
+import javafx.scene.text.Font;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 public class SmileyFace extends Application {
@@ -35,8 +37,13 @@ public class SmileyFace extends Application {
         mouth.setStroke(Color.BLUE);
         mouth.setType(ArcType.OPEN);
 
+        // create and configure the text
+        Text caption = new Text(110, 240, "jijiji");
+        caption.setFill(Color.BLUE);
+        caption.setFont(Font.font("Verdana", 15));
+
         // create a group that holds all the features
-        Group root = new Group(face, rightEye, leftEye, mouth);
+        Group root = new Group(face, rightEye, leftEye, mouth, caption);
 
         // create and configure a new scene
         Scene scene = new Scene(root, 250, 275, Color.YELLOW);
