@@ -3,6 +3,7 @@ package com.susanafigueroa;
 import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Arc;
 import javafx.scene.shape.ArcType;
@@ -44,6 +45,12 @@ public class SmileyFace extends Application {
 
         // create a group that holds all the features
         Group root = new Group(face, rightEye, leftEye, mouth, caption);
+
+        // create a button that will make the face smile
+        Button smileButton = new Button("Smile");
+
+        // create a button that will make the face frown
+        Button frownButton = new Button("Frown");
 
         // create and configure a new scene
         Scene scene = new Scene(root, 250, 275, Color.YELLOW);
