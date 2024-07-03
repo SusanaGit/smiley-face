@@ -22,8 +22,13 @@ public class SmileyFace extends Application {
         rightEye.setFill(Color.YELLOW);
         rightEye.setStroke(Color.BLUE);
 
+        // create and configure the circle for the left eye
+        Circle leftEye = new Circle(162, 100, 10);
+        leftEye.setFill(Color.YELLOW);
+        leftEye.setStroke(Color.BLUE);
+
         // create a group that holds all the features
-        Group root = new Group(face, rightEye);
+        Group root = new Group(face, rightEye, leftEye);
 
         // create and configure a new scene
         Scene scene = new Scene(root, 250, 275, Color.YELLOW);
