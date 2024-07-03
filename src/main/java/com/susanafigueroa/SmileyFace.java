@@ -19,7 +19,9 @@ public class SmileyFace extends Application {
 
         // create a group that holds all the features
         Group root = new Group(face);
-        
+
+        // create and configure a new scene
+        Scene scene = new Scene(root, 250, 275, Color.YELLOW);
     }
 
     public static void main(String[] args) {
