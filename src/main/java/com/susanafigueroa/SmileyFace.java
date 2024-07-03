@@ -74,6 +74,9 @@ public class SmileyFace extends Application {
         // create and configure a new scene
         Scene scene = new Scene(root, 250, 275, Color.YELLOW);
 
+        // supply the code that is executed when the smile button is pressed
+        smileButton.setOnAction(e -> mouth.setLength(-180));
+
         // add the scene to the stage
         primaryStage.setScene(scene);
 
