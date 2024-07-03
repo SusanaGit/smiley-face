@@ -77,6 +77,9 @@ public class SmileyFace extends Application {
         // supply the code that is executed when the smile button is pressed
         smileButton.setOnAction(e -> mouth.setLength(-180));
 
+        // supply the code that is executed when the frown button is pressed
+        frownButton.setOnAction(e -> mouth.setLength(180));
+
         // add the scene to the stage
         primaryStage.setScene(scene);
 
