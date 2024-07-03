@@ -58,6 +58,9 @@ public class SmileyFace extends Application {
         HBox buttonBox = new HBox(10);
         buttonBox.setAlignment(Pos.CENTER);
 
+        // add the buttons to the horizontal container
+        buttonBox.getChildren().addAll(smileButton, frownButton);
+
         // create and configure a new scene
         Scene scene = new Scene(root, 250, 275, Color.YELLOW);
 
