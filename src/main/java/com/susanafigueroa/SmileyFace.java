@@ -68,6 +68,9 @@ public class SmileyFace extends Application {
         root.setBackground(Background.EMPTY);
         root.setAlignment(Pos.CENTER);
 
+        // add the button box and the face group to the vertical container
+        root.getChildren().addAll(buttonBox, group);
+
         // create and configure a new scene
         Scene scene = new Scene(root, 250, 275, Color.YELLOW);
 
