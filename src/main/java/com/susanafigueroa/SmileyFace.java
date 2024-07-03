@@ -4,6 +4,8 @@ import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.paint.Color;
+import javafx.scene.shape.Arc;
+import javafx.scene.shape.ArcType;
 import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
 
@@ -27,8 +29,14 @@ public class SmileyFace extends Application {
         leftEye.setFill(Color.YELLOW);
         leftEye.setStroke(Color.BLUE);
 
+        // create and configure a smiling mouth
+        Arc mouth = new Arc(125, 150, 45, 35, 0, -180);
+        mouth.setFill(Color.YELLOW);
+        mouth.setStroke(Color.BLUE);
+        mouth.setType(ArcType.OPEN);
+
         // create a group that holds all the features
-        Group root = new Group(face, rightEye, leftEye);
+        Group root = new Group(face, rightEye, leftEye, mouth);
 
         // create and configure a new scene
         Scene scene = new Scene(root, 250, 275, Color.YELLOW);
