@@ -17,9 +17,13 @@ public class SmileyFace extends Application {
         face.setFill(Color.YELLOW);
         face.setStroke(Color.RED);
 
+        // create a group that holds all the features
+        Group root = new Group(face);
+        
     }
 
     public static void main(String[] args) {
         launch(args);
     }
+
 }
