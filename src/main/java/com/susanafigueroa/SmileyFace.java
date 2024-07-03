@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.layout.HBox;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Arc;
 import javafx.scene.shape.ArcType;
@@ -11,6 +12,7 @@ import javafx.scene.shape.Circle;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import javafx.geometry.Pos;
 
 public class SmileyFace extends Application {
 
@@ -51,6 +53,10 @@ public class SmileyFace extends Application {
 
         // create a button that will make the face frown
         Button frownButton = new Button("Frown");
+
+        // create and configure a horizontal container to hold the buttons
+        HBox buttonBox = new HBox(10);
+        buttonBox.setAlignment(Pos.CENTER);
 
         // create and configure a new scene
         Scene scene = new Scene(root, 250, 275, Color.YELLOW);
