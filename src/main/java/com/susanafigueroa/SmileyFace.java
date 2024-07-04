@@ -37,13 +37,13 @@ public class SmileyFace extends Application {
         leftEye.setStroke(Color.BLUE);
 
         // create and configure a smiling mouth
-        Arc mouth = new Arc(125, 150, 45, 35, 0, -180);
+        Arc mouth = new Arc(125, 150, 45, 35, 0, 0);
         mouth.setFill(Color.YELLOW);
         mouth.setStroke(Color.BLUE);
         mouth.setType(ArcType.OPEN);
 
         // create and configure the text
-        Text caption = new Text(110, 240, "jijiji");
+        Text caption = new Text(110, 240, "");
         caption.setFill(Color.BLUE);
         caption.setFont(Font.font("Verdana", 15));
 
