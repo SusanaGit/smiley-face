@@ -75,10 +75,19 @@ public class SmileyFace extends Application {
         Scene scene = new Scene(root, 250, 275, Color.YELLOW);
 
         // supply the code that is executed when the smile button is pressed
-        smileButton.setOnAction(e -> mouth.setLength(-180));
+        smileButton.setOnAction( e -> {
+            mouth.setLength(-180);
+            caption.setText("jijiji");
+        });
+
+
 
         // supply the code that is executed when the frown button is pressed
-        frownButton.setOnAction(e -> mouth.setLength(180));
+        frownButton.setOnAction( e -> {
+            mouth.setLength(180);
+            caption.setText("sniiif");
+        });
+
 
         // add the scene to the stage
         primaryStage.setScene(scene);
